@@ -1,0 +1,26 @@
+#+TITLE: Test file
+
+* TODO Task with planning, but without end time
+SCHEDULED: <2021-01-17 Sun 12:00>
+* TODO Task with planning
+SCHEDULED: <2021-01-17 Sun 12:00-13:00>
+* TODO Task with planning and with effort value
+SCHEDULED: <2021-01-17 Sun 12:00-13:00>
+:PROPERTIES:
+:Effort:   1:30
+:END:
+* TODO Task with effort value, with planning, but without end time
+SCHEDULED: <2021-01-17 Sun 12:00>
+:PROPERTIES:
+:Effort:   4:00
+:END:
+* TODO Task with only effort value
+:PROPERTIES:
+:Effort:   0:20
+:END:
+* TODO Task without planning at all
+* Print all TODO's from current file
+
+#+begin_src elisp
+(org-ql-search (current-buffer) '(todo))
+#+end_src

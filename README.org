@@ -1,0 +1,32 @@
+#+TITLE: Planning info to org-ql buffers
+#+AUTHOR: Mikhail Skorzhisnkii
+
+Adds time and effort specifications to the entries to [[https://github.com/alphapapa/org-ql][org-ql]] buffers.
+
+* Installation
+
+#+begin_src elisp
+(use-package org-ql-planning
+  :config
+  (org-ql-planning-load))
+#+end_src
+
+Recipe for doom emacs package.el:
+#+begin_src elisp
+(package! org-ql-planning
+  :recipe (:repo "mskorzhinskiy/org-ql-planning"
+           :host github :branch "main"))
+#+end_src
+
+* Usage
+
+Demonstration file included, see [[file:demo.org][demo.org]]. You can execute source block at the
+  end of that file to see how does it looks in your theme\setup.
+
+Use ~org-ql-planning-formats~ custom variable (=M-x customize-variable=) to configure
+  the exact spacing between sections.
+
+* Screenshot
+
+[[file:demo.png][demo.png]]
+
