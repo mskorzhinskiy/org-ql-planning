@@ -7,11 +7,12 @@ Adds time and effort specifications to the entries to [[https://github.com/alpha
 
 #+begin_src elisp
 (use-package org-ql-planning
-  :config
-  (org-ql-planning-load))
+  :config (org-ql-planning-load))
 #+end_src
 
-Recipe for doom emacs package.el:
+** Doom emacs
+
+Package recipe:
 #+begin_src elisp
 (package! org-ql-planning
   :recipe (:repo "mskorzhinskiy/org-ql-planning"
