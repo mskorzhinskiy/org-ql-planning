@@ -156,5 +156,5 @@ FUNC for original function and ARGS for original ARGS."
   (advice-remove 'org-ql-view--format-element
                  'org-ql-planning-do-format-line))
 
-(provide 'org-planning-info)
-;;; org-planning-info.el ends here
+(provide 'org-planning)
+;;; org-planning.el ends here
