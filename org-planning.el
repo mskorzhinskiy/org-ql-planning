@@ -19,8 +19,10 @@
 ;;
 ;;; Code:
 
+(require 'ts)
 (require 'org)
 (require 'org-ql)
+(require 'org-clock)
 
 (defcustom org-ql-planning-formats '(" %s - %s » %03s »"
                                      "     %s     » %03s »"
