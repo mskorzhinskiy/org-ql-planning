@@ -24,6 +24,11 @@
 (require 'org-ql)
 (require 'org-clock)
 
+(defcustom org-ql-planning-start-format "%e %b, %a » %H:%M"
+  "Format string for start time."
+  :group 'org-agenda
+  :type 'string)
+
 (defcustom org-ql-planning-formats '(" %s - %s » %03s »"
                                      "     %s     » %03s »"
                                      "     %s     »      »"
@@ -120,7 +125,7 @@ FUNC for original function and ARGS for original ARGS."
                    ;; using effort value. Effort value in this case would
                    ;; useless, as effort value is way less precise.
                    (format (nth 0 org-ql-planning-formats)
-                           (format-time-string "%H:%M" start)
+                           (format-time-string org-ql-planning-start-format start)
                            (format-time-string "%H:%M" end)
                            duration))
                   ;; If we have both effort value and event start, don't bother
@@ -131,11 +136,15 @@ FUNC for original function and ARGS for original ARGS."
                   ;; end and calculate end?
                   ((and have-hour-ts effort)
                    (format (nth 1 org-ql-planning-formats)
-                           (format-time-string "%H:%M" start)
+                           (format-time-string
+                            org-ql-planning-start-format
+                            start)
                            effort))
                   ;; Only event start
                   (have-hour-ts
-                   (format (nth 2 org-ql-planning-formats) (format-time-string "%H:%M" start)))
+                   (format (nth 2 org-ql-planning-formats) (format-time-string
+                                                            org-ql-planning-start-format
+                                                            start)))
                   ;; Only effort value
                   (effort
                    (format (nth 3 org-ql-planning-formats) effort))
