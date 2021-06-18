@@ -1,7 +1,8 @@
 #+TITLE: Planning info to org-ql buffers
 #+AUTHOR: Mikhail Skorzhisnkii
 
-Adds time and effort specifications to the entries to [[https://github.com/alphapapa/org-ql][org-ql]] buffers.
+Adds time and effort specifications to the entries to [[https://github.com/alphapapa/org-ql][org-ql]] buffers. Will
+  become obsolete once [[https://github.com/alphapapa/org-ql/issues/23][alphapapa/org-ql#23]] is fixed.
 
 * Installation
 
